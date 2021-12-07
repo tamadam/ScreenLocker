@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.andrognito.patternlockview.PatternLockView
+            android:id="@+id/patternView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/background_dark"
+            app:correctStateColor="@color/colorCorrectLine"
+            app:dotCount="3"
+            app:dotNormalSize="16dp"
+            app:dotSelectedSize="20dp"
+            app:normalStateColor="@color/colorNormalLine"
+            app:pathWidth="6dp"
+            app:wrongStateColor="@color/colorWrongLine"
+            tools:ignore="MissingConstraints,MissingPrefix,SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/setPatternButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:onClick="handleSetPatternButton"
+        android:text="@string/set_pattern"
+        android:backgroundTint="@color/buttonBackground"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

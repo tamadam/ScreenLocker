@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ScreenLocker</string>
+    <string name="set_pattern">Set pattern</string>
+</resources>
